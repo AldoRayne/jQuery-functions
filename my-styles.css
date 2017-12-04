@@ -1,0 +1,20 @@
+.holder {
+    position: relative;
+    width: 250px;
+    height: 120px;
+    padding: 20px;
+    border: 2px solid burlywood;
+}
+
+.test-div {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    margin-top: 40px;
+    border: 2px solid black;
+    left: calc(50% - 35px);
+}
+
+.color {
+    background-color: red;
+}
