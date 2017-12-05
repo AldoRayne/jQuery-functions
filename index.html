@@ -10,15 +10,9 @@
 
 <!-- addClass + removeClass + toggleClass -->
 <div class="holder">
-    <button type="button" onclick="$('#convertible-div').addClass('color')">
-        addClass-button
-    </button>
-    <button type="button" onclick="$('#convertible-div').removeClass('color')">
-        removeClass-button
-    </button>
-    <button type="button" onclick="$('#convertible-div').toggleClass('color')">
-        toggleClass-button
-    </button>
+    <button type="button" onclick="$('#convertible-div').addClass('color')">addClass-button</button>
+    <button type="button" onclick="$('#convertible-div').removeClass('color')">removeClass-button</button>
+    <button type="button" onclick="$('#convertible-div').toggleClass('color')">toggleClass-button</button>
     <div class="test-div" id="convertible-div"></div>
 </div>
 
@@ -35,6 +29,29 @@
             var test = $('.holder');
             $(this).clone(true).text("button for cloning (cloned)").appendTo(test[2]);
         });
+    </script>
+</div>
+
+<!-- eachBtnText -->
+<div class="holder">
+    <button type="button" id="for-btn-text">eachBtnText</button>
+    <script>
+        $("#for-btn-text").click(function () {
+            var test = $('button');
+            for (var i = 0; i < test.length; i++) {
+                console.log($(test[i]).text());
+            }
+        })
+    </script>
+</div>
+
+<!-- findMe -->
+<div class="holder">
+    <button type="button" id="findMe">findMe-btn</button>
+    <script>
+        $("#findMe").click(function () {
+            console.log($('body').find("#findMe"));
+        })
     </script>
 </div>
 </body>
