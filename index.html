@@ -7,14 +7,35 @@
     <title>Title</title>
 </head>
 <body>
+
+<!-- addClass + removeClass + toggleClass -->
 <div class="holder">
-    <button type="button" onclick="$('#add-remove-class').addClass ('color')">
+    <button type="button" onclick="$('#convertible-div').addClass('color')">
         addClass-button
     </button>
-    <button type="button" onclick="$('#add-remove-class').removeClass ('color')">
-        removerClass-button
+    <button type="button" onclick="$('#convertible-div').removeClass('color')">
+        removeClass-button
     </button>
-    <div class="test-div" id="add-remove-class"></div>
+    <button type="button" onclick="$('#convertible-div').toggleClass('color')">
+        toggleClass-button
+    </button>
+    <div class="test-div" id="convertible-div"></div>
+</div>
+
+<!-- Alert -->
+<div class="holder">
+    <button type="button" onclick="alert('Всплывающее сообщение')">Alert Call</button>
+</div>
+
+<!-- Cloning -->
+<div class="holder" id="cloning">
+    <button type="button" id="for-cloning">button for cloning</button>
+    <script>
+        $("#for-cloning").click(function () {
+            var test = $('.holder');
+            $(this).clone(true).text("button for cloning (cloned)").appendTo(test[2]);
+        });
+    </script>
 </div>
 </body>
 </html>

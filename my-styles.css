@@ -1,17 +1,17 @@
 .holder {
     position: relative;
-    width: 250px;
-    height: 120px;
+    float: left;
     padding: 20px;
+    margin: 0 50px 50px 0;
     border: 2px solid burlywood;
 }
 
 .test-div {
-    position: absolute;
+    position: relative;
     width: 70px;
     height: 40px;
     margin-top: 40px;
-    border: 2px solid black;
+    border: 1px solid black;
     left: calc(50% - 35px);
 }
 
