@@ -18,12 +18,12 @@
 
 <!-- Alert -->
 <div class="holder">
-    <button type="button" onclick="alert('Всплывающее сообщение')">Alert Call</button>
+    <button type="button" onclick="alert('Всплывающее сообщение')">alert-btn</button>
 </div>
 
 <!-- Cloning -->
 <div class="holder" id="cloning">
-    <button type="button" id="for-cloning">button for cloning</button>
+    <button type="button" id="for-cloning">cloning-btn</button>
     <script>
         $("#for-cloning").click(function () {
             var test = $('.holder');
@@ -34,7 +34,7 @@
 
 <!-- eachBtnText -->
 <div class="holder">
-    <button type="button" id="for-btn-text">eachBtnText</button>
+    <button type="button" id="for-btn-text">eachBtnText-btn</button>
     <script>
         $("#for-btn-text").click(function () {
             var test = $('button');
@@ -66,7 +66,7 @@
 </div>
 
 <div class="holder">
-    <button type="button" id="dataAboutMe">dataAboutMe</button>
+    <button type="button" id="dataAboutMe">dataAboutMe-btn</button>
     <script>
         $("#dataAboutMe").click(function () {
             var tmp = $("#dataAboutMe");
@@ -83,10 +83,19 @@
 <!-- fadeIn + fadeOut -->
 <div class="holder">
     <div class="inner">
-        <button type="button" onclick="$('#just-text').fadeIn('slow', function() {})">fadeInText</button>
-        <button type="button" onclick="$('#just-text').fadeOut('slow', function() {})">fadeOutText</button>
+        <button type="button" onclick="$('#just-text_v1').fadeOut('slow', function() {})">fadeOutText-btn</button>
+        <button type="button" onclick="$('#just-text_v1').fadeIn('slow', function() {})">fadeInText-btn</button>
     </div>
-    <p class="text-align" id="just-text">Some text</p>
+    <p class="text-align" id="just-text_v1">Some text</p>
+</div>
+
+<!-- textHide + textShow -->
+<div class="holder">
+    <div class="inner">
+        <button type="button" onclick="$('#just-text_v2').hide()">hideText-btn</button>
+        <button type="button" onclick="$('#just-text_v2').show()">showText-btn</button>
+    </div>
+    <p class="text-align" id="just-text_v2">Some text</p>
 </div>
 </body>
 </html>
