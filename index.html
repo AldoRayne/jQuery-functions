@@ -64,5 +64,29 @@
         })
     </script>
 </div>
+
+<div class="holder">
+    <button type="button" id="dataAboutMe">dataAboutMe</button>
+    <script>
+        $("#dataAboutMe").click(function () {
+            var tmp = $("#dataAboutMe");
+            console.log(
+                'Ширина кнопки: ' + tmp.css('width') + ';' + ' высота кнопки: ' + tmp.css('height') + ';' +
+                ' тип объекта: ' + tmp.attr('type') + ';' + ' ID: ' + tmp.attr('id') + ';' +
+                ' текст кнопки: ' + tmp.text() + ';' + ' абсолютное позиционирование по ширине: '
+                + tmp.parent()
+            )
+        })
+    </script>
+</div>
+
+<!-- fadeIn + fadeOut -->
+<div class="holder">
+    <div class="inner">
+        <button type="button" onclick="$('#just-text').fadeIn('slow', function() {})">fadeInText</button>
+        <button type="button" onclick="$('#just-text').fadeOut('slow', function() {})">fadeOutText</button>
+    </div>
+    <p class="text-align" id="just-text">Some text</p>
+</div>
 </body>
 </html>
