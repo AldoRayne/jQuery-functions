@@ -9,16 +9,28 @@
 <body>
 <form name="test-form" action="" method="">
     <fieldset>
-        <ul>
-            <li><input type="radio" name="radio-btn" id="radio-first"/><label for="radio-first">Первая радио-кнопка</label></li>
-            <li><input type="radio" name="radio-btn" id="radio-second"/><label for="radio-second">Вторая радио-кнопка</label></li>
+        <ul id="target_1">
+            <li><input type="radio" name="radio-btn" id="radio-first" value="Первая радио-кнопка"/><label for="radio-first">Первая радио-кнопка</label></li>
+            <li><input type="radio" name="radio-btn" id="radio-second" value="Вторая радио-кнопка"/><label for="radio-second">Вторая радио-кнопка</label></li>
         </ul>
+        <script>
+            $("input:radio[name='radio-btn']").change(function() {
+                var tmp = $(this).attr('value');
+                console.log(tmp);
+            })
+        </script>
     </fieldset>
     <fieldset>
-        <ul>
-            <li><input type="checkbox" name="check-btn" id="check-first"/><label for="check-first">Первый чек-бокс</label></li>
-            <li><input type="checkbox" name="check-btn" id="check-second"/><label for="check-second">Второй чек-бокс</label></li>
+        <ul id="target_2">
+            <li><input type="checkbox" name="check-btn" id="check-first" value="Первый чек-бокс"/><label for="check-first">Первый чек-бокс</label></li>
+            <li><input type="checkbox" name="check-btn" id="check-second" value="Второй чек-бокс"/><label for="check-second">Второй чек-бокс</label></li>
         </ul>
+        <script>
+            $("input:checkbox[name='check-btn']").change(function() {
+                var tmp = $(this).attr('value');
+                console.log(tmp);
+            })
+        </script>
     </fieldset>
     <fieldset>
         <select>
@@ -28,6 +40,15 @@
             <option value="var4">Вариант 4</option>
             <option value="var5">Вариант 5</option>
         </select>
+        <script>
+            $("select").change(function () {
+                    var str = "";
+                    $("select option:selected").each(function() {
+                        str = $(this).text();
+                    });
+                    console.log(str);
+                })
+        </script>
     </fieldset>
     <p><input type="submit" value="Отправить"/></p>
 </form>
