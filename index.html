@@ -65,17 +65,25 @@
     </script>
 </div>
 
+<!-- setAttr -->
+<div class="holder">
+    <button type="button" id="setAttr" onclick="$('#setAttr').attr('name', 'just-a-name')">setAttr-btn</button>
+</div>
+
+<!-- dataAboutMe -->
 <div class="holder">
     <button type="button" id="dataAboutMe">dataAboutMe-btn</button>
     <script>
-        $("#dataAboutMe").click(function () {
-            var tmp = $("#dataAboutMe");
+        var id_val = ("#dataAboutMe");
+        $(id_val).click(function () {
+            var tmp = $(id_val);
             console.log(
                 'Ширина кнопки: ' + tmp.css('width') + ';' + ' высота кнопки: ' + tmp.css('height') + ';' +
                 ' тип объекта: ' + tmp.attr('type') + ';' + ' ID: ' + tmp.attr('id') + ';' +
-                ' текст кнопки: ' + tmp.text() + ';' + ' абсолютное позиционирование по ширине: '
-                + tmp.parent()
-            )
+                ' текст кнопки: ' + tmp.text() + ';' + ' абсолютное позиционирование от левого края: '
+                + tmp.offset().left + ';' + ' абсолютное позиционирование от верхнего края: '
+                + tmp.offset().top);
+            console.log($(id_val).parent());
         })
     </script>
 </div>

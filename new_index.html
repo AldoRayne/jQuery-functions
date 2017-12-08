@@ -42,7 +42,7 @@
         </select>
         <script>
             $("select").change(function () {
-                    var str = "";
+                    var str = '';
                     $("select option:selected").each(function() {
                         str = $(this).text();
                     });
@@ -50,7 +50,24 @@
                 })
         </script>
     </fieldset>
-    <p><input type="submit" value="Отправить"/></p>
+    <p><input type="submit" id="submit-btn" value="Отправить"/></p>
+    <script>
+        $("#submit-btn").click(function () {
+            $("#submit-btn").preventDefault();
+            var tmp = $("input[name = 'radio-btn']");
+            for (var i = 0; i < tmp.length; i++) {
+                console.log(tmp[i]);
+            }
+            tmp = $("input[name = 'check-btn']");
+            for (var j = 0; j < tmp.length; j++) {
+                console.log(tmp[j]);
+            }
+            tmp = $("select option");
+            for (var k = 0; k < tmp.length; k++) {
+                console.log(tmp[k]);
+            }
+        })
+    </script>
 </form>
 </body>
 </html>
