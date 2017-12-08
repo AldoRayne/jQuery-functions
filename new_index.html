@@ -69,5 +69,37 @@
         })
     </script>
 </form>
+<form name="test_v2-form" action="" method="">
+    <fieldset>
+        <input id="keypress" type="text"/>
+        <input id ="keypress-clone" type="text" disabled="disabled"/>
+        <script>
+            $("#keypress").keypress(function () {
+                var tmp = document.getElementById("keypress").value;
+                $("#keypress-clone").attr('value', tmp);
+            })
+        </script>
+    </fieldset>
+    <fieldset>
+        <input id="keydown" type="text"/>
+        <input id ="keydown-clone" type="text" disabled="disabled"/>
+        <script>
+            $("#keydown").keydown(function () {
+                var tmp = document.getElementById("keydown").value;
+                $("#keydown-clone").attr('value', tmp);
+            })
+        </script>
+    </fieldset>
+    <fieldset>
+        <input id="keyup" type="text"/>
+        <input id ="keyup-clone" type="text" disabled="disabled"/>
+        <script>
+            $("#keyup").keyup(function () {
+                var tmp = document.getElementById("keyup").value;
+                $("#keyup-clone").attr('value', tmp);
+            })
+        </script>
+    </fieldset>
+</form>
 </body>
 </html>
